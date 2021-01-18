@@ -1,0 +1,32 @@
+.header {
+  background-color: #121423;
+  padding: 16px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__link {
+    margin-left: 25px;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+    
+    &:first-of-type {
+      margin-left: 43px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+  }
+
+  &__btn:last-child {
+    margin-left: 15px;
+  }
+}

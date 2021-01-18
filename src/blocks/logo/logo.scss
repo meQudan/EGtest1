@@ -1,0 +1,30 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    margin-left: 5px;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+
+    &_size {
+      &_small {
+        font-size: 20px;
+      }
+
+      &_big {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__img {
+    &_size {
+      &_small {
+        width: 40px;
+      }
+    }
+  }
+}

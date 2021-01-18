@@ -1,0 +1,26 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+
+  border-radius: 20px;
+  
+  font-weight: bold;
+  font-size: 16px;
+
+  &__text {
+    margin-left: 8px;
+  }
+
+  &_color_green {
+    background: #87E389;
+    color: #000000;
+  }
+
+  &_color_transparent {
+    border: 1px solid #FFFFFF;
+    background: transparent;
+    color: #FFFFFF;
+  }
+}
