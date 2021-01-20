@@ -5,6 +5,9 @@ body {
   font-family: Roboto, Arial, sans-serif;
 }
 
+$background-dark: #121423;
+$background-light: linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%);;
+
 @import '../blocks/container/container.scss';
 @import '../blocks/logo/logo.scss';
 @import '../blocks/btn/btn.scss';
@@ -12,3 +15,4 @@ body {
 @import '../blocks/screen2/screen2.scss';
 @import '../blocks/auth/auth.scss';
 @import '../blocks/frame/frame.scss';
+@import '../blocks/categories/categories.scss';

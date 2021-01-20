@@ -1,0 +1,79 @@
+.categories {
+  background-color: $background-dark;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 71.5%;
+  }
+
+  &__category {
+    display: flex;
+    align-items: flex-end;
+
+    &-icon {
+      margin-right: 12px;
+    }
+
+    &-text {
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 14px;
+
+      color: #FFFFFF;
+    }
+  }
+
+  &__select {
+    padding-right: 15px;
+    height: 24px;
+
+    background-color: $background-dark;
+
+    appearance: none;
+    background-image: url("/img/select-arrow-categories.svg");
+    background-repeat: no-repeat;
+    background-position: top 10px right 0;
+  }
+
+  &__search {
+    flex-grow: 1;
+    margin: 15px 0 15px 47px;
+    position: relative;
+
+    &-input {
+      padding-left: 9px;
+      height: 31px;
+      width: 100%;
+
+      background-color: transparent;
+
+      border: 1px solid #898989;
+      border-radius: 15px;
+
+      color: #fff;
+
+      &::placeholder {
+        font-weight: normal;
+        font-size: 14px;
+
+        color: #fff;
+      }
+    }
+
+    &-btn {
+      position: absolute;
+      top: 6px;
+      right: 16px;
+
+      background-color: transparent;
+    }
+
+  }
+}

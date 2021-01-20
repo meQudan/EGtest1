@@ -225,10 +225,10 @@ body {
 }
 
 .screen2 {
-  background-color: #222C42;
-  background-image: url("../img/crystals.png");
+  background-image: url("../img/crystals.png"), -o-linear-gradient(160.32deg, #121726 57.75%, #222C42 90.78%);
+  background-image: url("../img/crystals.png"), linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%);
   background-repeat: no-repeat;
-  background-position: top -90px left 53px;
+  background-position: top -90px left 53px, 0 0;
 }
 
 .screen2__container {
@@ -328,7 +328,7 @@ body {
   position: relative;
 }
 
-.auth__pass-img {
+.auth__pass-btn {
   position: absolute;
   top: 6px;
   right: 11px;
@@ -400,7 +400,7 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-image: url("/img/select-arrow.svg");
+  background-image: url("/img/select-arrow-auth.svg");
   background-repeat: no-repeat;
   background-position: top 13px right 9px;
 }
@@ -563,6 +563,121 @@ body {
   margin-left: 1.1%;
 }
 
-.webp .screen2{ background-image: url(../img/crystals.webp); }
+.categories {
+  background-color: #121423;
+}
+
+.categories__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.categories__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  width: 71.5%;
+}
+
+.categories__category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.categories__category-icon {
+  margin-right: 12px;
+}
+
+.categories__category-text {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.categories__select {
+  padding-right: 15px;
+  height: 24px;
+  background-color: #121423;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("/img/select-arrow-categories.svg");
+  background-repeat: no-repeat;
+  background-position: top 10px right 0;
+}
+
+.categories__search {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 15px 0 15px 47px;
+  position: relative;
+}
+
+.categories__search-input {
+  padding-left: 9px;
+  height: 31px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #898989;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.categories__search-input::-webkit-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  color: #fff;
+}
+
+.categories__search-input::-moz-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  color: #fff;
+}
+
+.categories__search-input:-ms-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  color: #fff;
+}
+
+.categories__search-input::-ms-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  color: #fff;
+}
+
+.categories__search-input::placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  color: #fff;
+}
+
+.categories__search-btn {
+  position: absolute;
+  top: 6px;
+  right: 16px;
+  background-color: transparent;
+}
+
+.webp .screen2{ background-image: url(../img/crystals.webp), -o-linear-gradient(160.32deg, #121726 57.75%, #222C42 90.78%); }
+
+.webp .screen2{ background-image: url(../img/crystals.webp), linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%); }
 
 .webp .screen2__container{ background-image: url(../img/crystals1.webp); }

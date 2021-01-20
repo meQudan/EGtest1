@@ -56,20 +56,21 @@
     }
   }
 
-  &__pass-currency-wrapper {
-    display: flex;
-    justify-content: space-between;
-
-    width: 100%;
-  }
-
   &__pass {
+
+    &-currency-wrapper {
+      display: flex;
+      justify-content: space-between;
+  
+      width: 100%;
+    }
+
     &-wrapper {
       width: 216px;
       position: relative;
     }
 
-    &-img {
+    &-btn {
       position: absolute;
       top: 6px;
       right: 11px;
@@ -130,7 +131,7 @@
 
       border-radius: 7px;
       appearance: none;
-      background-image: url("/img/select-arrow.svg");
+      background-image: url("/img/select-arrow-auth.svg");
       background-repeat: no-repeat;
       background-position: top 13px right 9px;
     }
