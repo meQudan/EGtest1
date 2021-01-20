@@ -905,6 +905,91 @@ body {
   border-bottom: 12px solid #F8463F;
 }
 
+.last-wins {
+  padding: 15px 0;
+  background: #20263E;
+  -webkit-box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
+}
+
+.last-wins__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.last-wins__title {
+  margin-right: 60px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.last-wins__winners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.last-wins__winner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.last-wins__winner-img {
+  border-radius: 50%;
+}
+
+.last-wins__winner-img-link {
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.last-wins__winner-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+}
+
+.last-wins__winner-name {
+  color: #fff;
+  font-size: 12px;
+}
+
+.last-wins__winner-game {
+  color: #87E389;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.last-wins__winner-cash {
+  margin-top: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .webp .screen2{ background-image: url(../img/crystals.webp), -o-linear-gradient(160.32deg, #121726 57.75%, #222C42 90.78%); }
 
 .webp .screen2{ background-image: url(../img/crystals.webp), linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%); }

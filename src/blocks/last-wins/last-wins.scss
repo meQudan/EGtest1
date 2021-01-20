@@ -1,0 +1,63 @@
+.last-wins {
+  padding: 15px 0;
+  background: #20263E;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-right: 60px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+
+  &__winners {
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__winner {
+    display: flex;
+
+    &-img {
+      border-radius: 50%;
+      &-link {
+        margin-right: 8px;
+        border-radius: 50%;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 10px 0;
+    }
+
+    &-name {
+      color: #fff;
+      font-size: 12px;
+    }
+
+    &-game {
+      color: #87E389;
+      font-size: 12px;
+      text-decoration: underline;
+    }
+
+    &-cash {
+      margin-top: 4px;
+
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}
