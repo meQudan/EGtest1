@@ -1,0 +1,154 @@
+.games {
+  background-image: $background-light;
+
+  &__container {
+    padding-top: 50px;
+  }
+
+  &__new-games {
+    padding-bottom: 65px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ffffff;
+  }
+
+  &__link-view-all {
+    font-weight: 500;
+    font-size: 18px;
+    color: #87E389;
+
+    &-arrow {
+      margin-top: 1px;
+      margin-left: 12px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__smalls {
+    width: 68%;
+
+    &-line {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 10px;
+
+      &:first-child {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__small {
+    flex-shrink: 1;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-left: 8px;
+    }
+
+    &-img {
+      width: 100%;
+      border-radius: 11%;
+    }
+  }
+
+  &__big {
+    width: 32%;
+    position: relative;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+
+      border-radius: 5%;
+
+      &_green {
+        border: 5px solid #8BEB01;
+        box-shadow: 0px 0px 14px #8BEB01;
+      }
+    }
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-63px, -20px);
+
+    padding: 13px 30px;
+
+    width: 126px;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+
+    background: #87E389;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+    border-radius: 100px;
+  }
+
+  %ribbon-after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: -7px;
+    border-left: 7px solid transparent;
+  };
+
+  &__ribbon {
+    position: absolute;
+
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+
+    background: linear-gradient(to left, #1D1269 0%, #F8463F 27.07%);
+
+    &_big {
+      top: 25px;
+      right: 5px;
+
+      padding: 10px 16px 10px 5px;
+
+      height: 34px;
+
+      &:after {
+        @extend %ribbon-after;
+        border-top: 17px solid #F8463F;
+        border-bottom: 17px solid #F8463F;
+      }
+    }
+
+    &_small {
+      top: 20px;
+      right: 0px;
+
+      padding: 5px 16px 5px 5px;
+
+      height: 24px;
+
+      &:after {
+        @extend %ribbon-after;
+        border-top: 12px solid #F8463F;
+        border-bottom: 12px solid #F8463F;
+      }
+    }
+  }
+}
