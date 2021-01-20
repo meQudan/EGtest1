@@ -1,0 +1,14 @@
+.screen2 {
+  background-color: #222C42;
+  background-image: url("../img/crystals.png");
+  background-repeat: no-repeat;
+  background-position: top -90px left 53px;
+  
+  &__container {
+    display: flex;
+
+    background-image: url("../img/crystals1.png");
+    background-repeat: no-repeat;
+    background-position: bottom 23px left 225px ;
+  }
+}
