@@ -1,0 +1,60 @@
+.providers {
+  background-color: $background-dark;
+
+  %elem-style {
+    padding: 5px 17px; 
+
+    border-radius: 13px;
+
+    font-weight: normal;
+    font-size: 13px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    padding: 17px 0;
+  }
+
+  &__link {
+    @extend %elem-style;
+    margin-right: 15px;
+
+    border: 1px solid #282F4B;
+
+    color: #8187AD;
+
+    &-all {
+      @extend %elem-style;
+      margin-right: 15px;
+
+      border: 1px solid #D73649;
+      
+      color: #fff;
+    }
+  }
+
+  &__select {
+    @extend %elem-style;
+
+    width: 83px;
+
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.28);
+
+    appearance: none;
+    background-color: $background-dark;
+    background-image: url("/img/select-arrow-categories.svg");
+    background-repeat: no-repeat;
+    background-position: top 10px right 11px;
+    
+    font-family: Roboto;
+    color: #fff;
+    line-height: 1em;
+  }
+}

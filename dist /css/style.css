@@ -612,10 +612,14 @@ body {
 .categories__select {
   padding-right: 15px;
   height: 24px;
-  background-color: #121423;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFFFFF;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  background-color: #121423;
   background-image: url("/img/select-arrow-categories.svg");
   background-repeat: no-repeat;
   background-position: top 10px right 0;
@@ -636,6 +640,8 @@ body {
   background-color: transparent;
   border: 1px solid #898989;
   border-radius: 15px;
+  font-size: 14px;
+  font-weight: normal;
   color: #fff;
 }
 
@@ -674,6 +680,67 @@ body {
   top: 6px;
   right: 16px;
   background-color: transparent;
+}
+
+.providers {
+  background-color: #121423;
+}
+
+.providers .providers__link,
+.providers .providers__link-all,
+.providers .providers__select {
+  padding: 5px 17px;
+  border-radius: 13px;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.providers__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.providers__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 17px 0;
+}
+
+.providers__link {
+  margin-right: 15px;
+  border: 1px solid #282F4B;
+  color: #8187AD;
+}
+
+.providers__link-all {
+  margin-right: 15px;
+  border: 1px solid #D73649;
+  color: #fff;
+}
+
+.providers__select {
+  width: 83px;
+  border: 1px solid #FFFFFF;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.28);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.28);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #121423;
+  background-image: url("/img/select-arrow-categories.svg");
+  background-repeat: no-repeat;
+  background-position: top 10px right 11px;
+  font-family: Roboto;
+  color: #fff;
+  line-height: 1em;
 }
 
 .webp .screen2{ background-image: url(../img/crystals.webp), -o-linear-gradient(160.32deg, #121726 57.75%, #222C42 90.78%); }
