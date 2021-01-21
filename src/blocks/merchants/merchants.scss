@@ -1,0 +1,21 @@
+.merchants {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 35px;
+
+  border-bottom: 2px solid #172146;
+
+  &__item {
+    margin-top: 35px;
+
+    text-align: center;
+    width: 10%;
+  }
+
+  &__img {
+    width: 80%;
+  }
+}

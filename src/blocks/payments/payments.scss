@@ -2,9 +2,17 @@
   padding: 104px 0 51px;
   text-align: center;
 
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__img {
-    &:not(:first-child) {
-      margin-left: 50px;
+    &-container {
+      &:not(:first-child) {
+        margin-left: 50px;
+      }
     }
   }
 }

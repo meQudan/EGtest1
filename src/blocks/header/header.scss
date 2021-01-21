@@ -7,19 +7,26 @@
     justify-content: space-between;
     align-items: center;
   }
-  
-  &__link {
-    margin-left: 25px;
 
+  &__main-menu {
+    display: flex;
+
+    &-item:not(:first-child) {
+      margin-left: 25px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    margin-left: 43px;
+  }
+
+  &__link {
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
 
-    color: #FFFFFF;
-    
-    &:first-of-type {
-      margin-left: 43px;
-    }
+    color: #ffffff;
   }
 
   &__btns {

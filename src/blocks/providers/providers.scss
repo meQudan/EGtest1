@@ -22,20 +22,24 @@
   }
 
   &__link {
+    color: #8187AD;
+
+    &-all {
+      color: #fff;
+    }
+  }
+
+  &__item {
     @extend %elem-style;
     margin-right: 15px;
 
     border: 1px solid #282F4B;
-
-    color: #8187AD;
 
     &-all {
       @extend %elem-style;
       margin-right: 15px;
 
       border: 1px solid #D73649;
-      
-      color: #fff;
     }
   }
 

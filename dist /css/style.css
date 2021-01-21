@@ -160,6 +160,10 @@ body {
   width: 40px;
 }
 
+.logo__img_size_big {
+  width: 50px;
+}
+
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,16 +213,28 @@ body {
           align-items: center;
 }
 
-.header__link {
+.header__main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__main-menu-item:not(:first-child) {
   margin-left: 25px;
+}
+
+.header__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 43px;
+}
+
+.header__link {
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
-  color: #FFFFFF;
-}
-
-.header__link:first-of-type {
-  margin-left: 43px;
+  color: #ffffff;
 }
 
 .header__btns {
@@ -692,8 +708,8 @@ body {
   background-color: #121423;
 }
 
-.providers .providers__link,
-.providers .providers__link-all,
+.providers .providers__item,
+.providers .providers__item-all,
 .providers .providers__select {
   padding: 5px 17px;
   border-radius: 13px;
@@ -721,15 +737,21 @@ body {
 }
 
 .providers__link {
-  margin-right: 15px;
-  border: 1px solid #282F4B;
   color: #8187AD;
 }
 
 .providers__link-all {
+  color: #fff;
+}
+
+.providers__item {
+  margin-right: 15px;
+  border: 1px solid #282F4B;
+}
+
+.providers__item-all {
   margin-right: 15px;
   border: 1px solid #D73649;
-  color: #fff;
 }
 
 .providers__select {
@@ -1214,8 +1236,52 @@ body {
   text-align: center;
 }
 
-.payments__img:not(:first-child) {
+.payments__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.payments__img-container:not(:first-child) {
   margin-left: 50px;
+}
+
+.footer {
+  background-color: #121423;
+  -webkit-box-shadow: inset 0px 4px 34px rgba(0, 0, 0, 0.45);
+          box-shadow: inset 0px 4px 34px rgba(0, 0, 0, 0.45);
+}
+
+.merchants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 35px;
+  border-bottom: 2px solid #172146;
+}
+
+.merchants__item {
+  margin-top: 35px;
+  text-align: center;
+  width: 10%;
+}
+
+.merchants__img {
+  width: 80%;
 }
 
 .webp .screen2{ background-image: url(../img/crystals.webp); }
