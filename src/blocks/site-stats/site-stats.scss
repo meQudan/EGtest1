@@ -1,0 +1,55 @@
+.site-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 355px;
+
+  transform: translateY(10px);
+
+  padding: 53px 0 53px 54px;
+
+  background: #20263E;
+  box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.35);
+
+  &__item {
+    display: flex;
+    position: relative;
+
+    &:not(:last-child):after {
+      content: '';
+      display: block;
+
+      position: absolute;
+      bottom: -17px;
+
+      width: 265px;
+
+      border: 1px solid #282F4B;
+    }
+  }
+
+  &__img {
+    width: 75px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+  }
+
+  &__number {
+    line-height: 1em;
+    height: 45px;
+    font-weight: 700;
+    font-size: 50px;
+    color: #87E389;
+  }
+
+  &__about {
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+  }
+}

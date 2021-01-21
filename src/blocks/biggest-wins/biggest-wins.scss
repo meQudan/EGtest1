@@ -1,0 +1,46 @@
+.biggest-wins {
+  flex: 1 1 535px;
+  text-align: center;
+  border-collapse: collapse;
+
+  &__tr {
+    height: 40px;
+
+    &:nth-child(2) {
+      background-image: linear-gradient(180deg, rgba(10, 17, 37, 0.5) 0%, rgba(26, 33, 51, 0) 23.58%);
+    }
+
+    &_uneven {
+      background-color: #222C42;
+    }
+    
+    &_even {
+      background-color: #182237;
+    }
+  }
+
+  &__th {
+    width: 33%;
+
+    font-weight: 500;
+    font-size: 14px;
+    color: #8C91BA;
+  }
+
+  &__td-player {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  &__td-points {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+  }
+}

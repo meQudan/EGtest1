@@ -1,0 +1,17 @@
+.promo {
+  background-image: $background-light;
+  padding-top: 50px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+  }
+}
