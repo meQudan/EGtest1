@@ -5,7 +5,7 @@
     padding-top: 50px;
   }
 
-  &__new-games {
+  &__new {
     padding-bottom: 65px;
   }
 
@@ -41,10 +41,19 @@
   &__smalls {
     width: 68%;
 
+    &-order1 {
+      order: 1;
+    }
+
     &-line {
       display: flex;
       justify-content: space-between;
       padding-right: 10px;
+
+      &-order1 {
+        padding-left: 10px;
+        padding-right: 0;
+      }
 
       &:first-child {
         margin-bottom: 8px;
@@ -79,6 +88,16 @@
       &_green {
         border: 5px solid #8BEB01;
         box-shadow: 0px 0px 14px #8BEB01;
+      }
+
+      &_blue {
+        border: 5px solid #50FFE0;
+        box-shadow: 0px 0px 14px #50FFDF;
+      }
+
+      &_purple {
+        border: 5px solid #4F00F7;
+        box-shadow: 0px 0px 14px #4F00F7;
       }
     }
   }
