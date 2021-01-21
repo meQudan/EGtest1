@@ -92,6 +92,7 @@ $frame-width: 1045px;
     &-line {
       width: 24.175%;
       height: 5px;
+      position: relative;
       
       background: rgba(72, 80, 143, 0.7);
       border-radius: 50px;
@@ -99,6 +100,27 @@ $frame-width: 1045px;
       &:not(:first-child) {
         margin-left: 1.1%;
       }
+
+      &-timer {
+        position: absolute;
+
+        width: 0;
+        height: 5px;
+
+        border-radius: 5px;
+        background-color: #87E389;
+      }
     }
+  }
+}
+
+#frame-timer1 {
+  animation: timer 10s linear 1s;
+
+}
+
+@keyframes timer {
+  100% {
+    width: 100%;
   }
 }

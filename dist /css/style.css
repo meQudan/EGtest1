@@ -582,12 +582,38 @@ body {
 .frame__slider-line {
   width: 24.175%;
   height: 5px;
+  position: relative;
   background: rgba(72, 80, 143, 0.7);
   border-radius: 50px;
 }
 
 .frame__slider-line:not(:first-child) {
   margin-left: 1.1%;
+}
+
+.frame__slider-line-timer {
+  position: absolute;
+  width: 0;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #87E389;
+}
+
+#frame-timer1 {
+  -webkit-animation: timer 10s linear 1s;
+          animation: timer 10s linear 1s;
+}
+
+@-webkit-keyframes timer {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes timer {
+  100% {
+    width: 100%;
+  }
 }
 
 .categories {
@@ -1261,6 +1287,7 @@ body {
   background-color: #121423;
   -webkit-box-shadow: inset 0px 4px 34px rgba(0, 0, 0, 0.45);
           box-shadow: inset 0px 4px 34px rgba(0, 0, 0, 0.45);
+  padding: 35px 0 50px 0;
 }
 
 .footer__contacts {
@@ -1409,6 +1436,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: -35px;
   padding-bottom: 35px;
   border-bottom: 2px solid #172146;
 }
