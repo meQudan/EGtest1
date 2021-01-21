@@ -1,0 +1,21 @@
+.floating-panel {
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  right: 50px;
+  bottom: 200px;
+
+  &__btn {
+    width: 48px;
+    height: 48px;
+  
+    background-color: #32448C;
+    border-radius: 50%;
+
+    &:not(:first-child) {
+      margin-top: 9px;
+    }
+  }
+  
+}

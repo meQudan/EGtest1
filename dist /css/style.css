@@ -532,6 +532,7 @@ body {
   margin-right: 8px;
   width: 33px;
   height: 33px;
+  background-color: transparent;
   border-radius: 50%;
   border: 1px solid #595959;
 }
@@ -1420,6 +1421,37 @@ body {
 
 .merchants__img {
   width: 80%;
+}
+
+.floating-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  right: 50px;
+  bottom: 200px;
+}
+
+.floating-panel__btn {
+  width: 48px;
+  height: 48px;
+  background-color: #32448C;
+  border-radius: 50%;
+}
+
+.floating-panel__btn:not(:first-child) {
+  margin-top: 9px;
+}
+
+.floating-arrow {
+  position: fixed;
+  bottom: 100px;
+  right: 110px;
+  background-color: transparent;
 }
 
 .webp .screen2{ background-image: url(../img/crystals.webp); }
