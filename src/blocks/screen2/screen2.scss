@@ -1,7 +1,7 @@
 .screen2 {
-  background-image: url("../img/crystals.png"), $background-light;
+  background-image: url("../img/crystals.png");
   background-repeat: no-repeat;
-  background-position: top -90px left 53px, 0 0;
+  background-position: top -90px left 53px;
   
   &__container {
     display: flex;

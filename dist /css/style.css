@@ -120,6 +120,13 @@ body {
   font-family: Roboto, Arial, sans-serif;
 }
 
+.main {
+  background-image: -o-linear-gradient(160.32deg, #121726 57.75%, #222C42 90.78%);
+  background-image: linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .container {
   max-width: 1525px;
   margin: auto;
@@ -225,10 +232,9 @@ body {
 }
 
 .screen2 {
-  background-image: url("../img/crystals.png"), -o-linear-gradient(160.32deg, #121726 57.75%, #222C42 90.78%);
-  background-image: url("../img/crystals.png"), linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%);
+  background-image: url("../img/crystals.png");
   background-repeat: no-repeat;
-  background-position: top -90px left 53px, 0 0;
+  background-position: top -90px left 53px;
 }
 
 .screen2__container {
@@ -743,11 +749,6 @@ body {
   line-height: 1em;
 }
 
-.games {
-  background-image: -o-linear-gradient(160.32deg, #121726 57.75%, #222C42 90.78%);
-  background-image: linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%);
-}
-
 .games__container {
   padding-top: 50px;
 }
@@ -1014,8 +1015,6 @@ body {
 }
 
 .promo {
-  background-image: -o-linear-gradient(160.32deg, #121726 57.75%, #222C42 90.78%);
-  background-image: linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%);
   padding-top: 50px;
 }
 
@@ -1210,8 +1209,15 @@ body {
   color: #fff;
 }
 
-.webp .screen2{ background-image: url(../img/crystals.webp), -o-linear-gradient(160.32deg, #121726 57.75%, #222C42 90.78%); }
+.payments {
+  padding: 104px 0 51px;
+  text-align: center;
+}
 
-.webp .screen2{ background-image: url(../img/crystals.webp), linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%); }
+.payments__img:not(:first-child) {
+  margin-left: 50px;
+}
+
+.webp .screen2{ background-image: url(../img/crystals.webp); }
 
 .webp .screen2__container{ background-image: url(../img/crystals1.webp); }

@@ -1,12 +1,20 @@
 @import 'reset';
 @import 'fonts';
 
+$background-dark: #121423;
+$background-light: linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%);
+
 body {
   font-family: Roboto, Arial, sans-serif;
 }
 
-$background-dark: #121423;
-$background-light: linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%);;
+.main {
+  background-image: $background-light;
+  background-repeat: no-repeat;
+  background-size: contain; 
+}
+
+
 
 @import '../blocks/container/container.scss';
 @import '../blocks/logo/logo.scss';
@@ -23,3 +31,4 @@ $background-light: linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%);;
 @import '../blocks/top-game/top-game.scss';
 @import '../blocks/site-stats/site-stats.scss';
 @import '../blocks/biggest-wins/biggest-wins.scss';
+@import '../blocks/payments/payments.scss';

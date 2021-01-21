@@ -1,0 +1,10 @@
+.payments {
+  padding: 104px 0 51px;
+  text-align: center;
+
+  &__img {
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
+  }
+}
