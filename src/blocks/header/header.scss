@@ -10,13 +10,13 @@
 
   &__main-menu {
     display: flex;
-
-    &-item:not(:first-child) {
-      margin-left: 25px;
-    }
   }
 
-  &__links {
+  &__search-btn {
+    background-color: transparent;
+  }
+
+  &__nav {
     display: flex;
     margin-left: 43px;
   }
@@ -27,6 +27,10 @@
     line-height: 21px;
 
     color: #ffffff;
+
+    &:not(:first-child) {
+      margin-left: 25px;
+    }
   }
 
   &__btns {

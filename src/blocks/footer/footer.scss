@@ -1,4 +1,135 @@
 .footer {
   background-color: $background-dark;
   box-shadow: inset 0px 4px 34px rgba(0, 0, 0, 0.45);
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 44px;
+  }
+
+  &__emblems {
+    display: flex;
+    align-items: center;
+    margin-top: 37px;
+  }
+
+  &__emblem {
+    margin-left: 16px;
+  }
+
+  &__links {
+    display: flex;
+
+    &-title {
+      margin: 20px 65px 25px 0;
+
+      font-weight: 500;
+      font-size: 24px;
+      color: #fff;
+    }
+  }
+
+  &__link {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #32448c;
+
+    &-wrapper {
+      &:not(:last-child) {
+        margin-bottom: 9px;
+      }
+    }
+  }
+
+  &__promo {
+    &-info {
+      flex: 0 1 412px;
+      margin-top: 20px;
+
+      &-title {
+        margin-bottom: 24px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 1.1em;
+        color: #fff;
+      }
+
+      &-text {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 1.2em;
+        color: #fff;
+      }
+    }
+
+    &-radio {
+      &-btns {
+        display: flex;
+        margin-top: 15px;
+        align-items: center;
+        width: 9px;
+
+        &-wrapper {
+          position: relative;
+          margin-right: 20px;
+        }
+      }
+
+      &-btn {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+
+        width: 9px;
+        height: 9px;
+
+        &:checked + label::before {
+          background-color: #32448c;
+        }
+
+        &-label {
+          height: 9px;
+          &::before {
+            content: '';
+            display: inline-block;
+            top: -4px;
+
+            width: 9px;
+            height: 9px;
+
+            background: #172146;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  &__smalltext {
+    margin: 30px auto 0;
+
+    max-width: 895px;
+
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+
+    color: #ffffff;
+
+    &-link {
+      color: #04D0AE;
+    }
+  }
+}
+
+.footer__promo-info-wrapper:nth-child(2),
+.footer__promo-info-wrapper:nth-child(3),
+.footer__promo-info-wrapper:nth-child(4),
+.footer__promo-info-wrapper:nth-child(5),
+.footer__promo-info-wrapper:nth-child(6) {
+  display: none;
 }
