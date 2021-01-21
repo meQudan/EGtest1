@@ -36,7 +36,6 @@ const { src, dest, watch, parallel, series } = require('gulp'),
   rename = require('gulp-rename'),
   uglify = require('gulp-uglify-es').default,
   babel = require('gulp-babel'),
-  imagemin = require('gulp-imagemin'),
   webp = require('gulp-webp'),
   webphtml = require('gulp-webp-html'),
   webpcss = require('gulp-webpcss'),
@@ -110,19 +109,10 @@ function js() {
 
 function images() {
   return src(path.src.img)
+    .pipe(dest(path.build.img))
     .pipe(
       webp({
-        quality: 70,
-      })
-    )
-    .pipe(dest(path.build.img))
-    .pipe(src(path.src.img))
-    .pipe(
-      imagemin({
-        progressive: true,
-        svgPlugins: [{ removeViewBox: false }],
-        interlaced: true,
-        optimizationLevel: 3,
+        quality: 100,
       })
     )
     .pipe(dest(path.build.img))
