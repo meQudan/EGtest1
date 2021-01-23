@@ -1,18 +1,18 @@
 .payments {
-  padding: 104px 0 51px;
+  padding: 50px 0 50px;
   text-align: center;
 
-  &__container {
+  &__imgs {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    margin-left: -50px;
   }
 
   &__img {
-    &-container {
-      &:not(:first-child) {
-        margin-left: 50px;
-      }
-    }
+    margin-top: 50px;
+    margin-left: 50px;
   }
 }

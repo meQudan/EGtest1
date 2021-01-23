@@ -1263,23 +1263,27 @@ body {
 }
 
 .payments {
-  padding: 104px 0 51px;
+  padding: 50px 0 50px;
   text-align: center;
 }
 
-.payments__container {
+.payments__imgs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: -50px;
 }
 
-.payments__img-container:not(:first-child) {
+.payments__img {
+  margin-top: 50px;
   margin-left: 50px;
 }
 
@@ -1425,6 +1429,11 @@ body {
 }
 
 .merchants {
+  padding-bottom: 35px;
+  border-bottom: 2px solid #172146;
+}
+
+.merchants__imgs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1433,22 +1442,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: -35px;
-  padding-bottom: 35px;
-  border-bottom: 2px solid #172146;
-}
-
-.merchants__item {
-  margin-top: 35px;
-  text-align: center;
-  width: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -50px;
 }
 
 .merchants__img {
-  width: 80%;
+  margin-top: 35px;
+  margin-left: 50px;
 }
 
 .floating-panel {
