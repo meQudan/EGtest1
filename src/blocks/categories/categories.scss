@@ -17,6 +17,11 @@
     display: flex;
     align-items: flex-end;
 
+    &:hover > .categories__category-text {
+      color: #87e389;
+      text-shadow: 1px 1px 2px #87e389;
+    }
+
     &-icon {
       margin-right: 12px;
     }
@@ -26,7 +31,9 @@
       font-weight: 500;
       font-size: 14px;
 
-      color: #FFFFFF;
+      color: #ffffff;
+
+      transition: $transition;
     }
   }
 
@@ -37,13 +44,20 @@
     font-family: Roboto;
     font-weight: 500;
     font-size: 14px;
-    color: #FFFFFF;
+    color: #ffffff;
 
     appearance: none;
     background-color: $background-dark;
-    background-image: url("/img/select-arrow-categories.svg");
+    background-image: url('/img/select-arrow-categories.svg');
     background-repeat: no-repeat;
     background-position: top 10px right 0;
+
+    transition: $transition;
+
+    &:hover {
+      color: #87e389;
+      text-shadow: 1px 1px 2px #87e389;
+    }
   }
 
   &__search {
@@ -80,6 +94,5 @@
 
       background-color: transparent;
     }
-
   }
 }

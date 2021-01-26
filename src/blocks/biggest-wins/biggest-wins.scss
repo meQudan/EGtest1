@@ -11,9 +11,9 @@
     }
 
     &_uneven {
-      background-color: #222C42;
+      background-color: #222c42;
     }
-    
+
     &_even {
       background-color: #182237;
     }
@@ -24,7 +24,7 @@
 
     font-weight: 500;
     font-size: 14px;
-    color: #8C91BA;
+    color: #8c91ba;
   }
 
   &__td-player {
@@ -36,6 +36,14 @@
     font-size: 14px;
     color: #fff;
     text-decoration: underline;
+
+    transition: $transition;
+
+    &:hover {
+      color: #87e389;
+      text-shadow: 1px 1px 2px #87e389;
+      text-decoration: underline;
+    }
   }
 
   &__td-points {

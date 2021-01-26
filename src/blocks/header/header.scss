@@ -12,8 +12,18 @@
     display: flex;
   }
 
-  &__search-btn {
-    background-color: transparent;
+  &__search {
+    &-btn {
+      background-color: transparent;
+
+      &:hover > .header__search-svg {
+        transform: scale(1.3);
+      }
+    }
+
+    &-svg {
+      transition: $transition;
+    }
   }
 
   &__nav {
@@ -27,6 +37,13 @@
     line-height: 21px;
 
     color: #ffffff;
+
+    transition: $transition;
+
+    &:hover {
+      color: #87e389;
+      text-shadow: 1px 1px 2px #87e389;
+    }
 
     &:not(:first-child) {
       margin-left: 25px;

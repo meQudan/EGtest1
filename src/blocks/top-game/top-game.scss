@@ -43,6 +43,14 @@
     color: #fff;
 
     text-decoration: underline;
+
+    transition: $transition;
+
+    &:hover {
+      color: #87e389;
+      text-shadow: 1px 1px 2px #87e389;
+      text-decoration: underline;
+    }
   }
 
   &__btn {

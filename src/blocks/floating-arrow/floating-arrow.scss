@@ -3,5 +3,14 @@
   bottom: 100px;
   right: 110px;
 
+  padding: 10px;
+
   background-color: transparent;
+  border-radius: 50%;
+
+  transition: $transition;
+
+  &:hover {
+    box-shadow: inset 0 0 15px #87E389;
+  }
 }

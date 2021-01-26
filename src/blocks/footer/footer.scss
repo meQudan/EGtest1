@@ -37,6 +37,12 @@
     font-size: 16px;
     line-height: 19px;
     color: #32448c;
+    transition: $transition;
+
+    &:hover {
+      color: #87E389;
+      text-shadow: 1px 1px 2px #87E389;
+    }
 
     &-wrapper {
       &:not(:last-child) {
@@ -91,8 +97,15 @@
           background-color: #32448c;
         }
 
+        &:not(:checked):hover + label::before {
+            border: 1px solid #32448c;
+        }
+
         &-label {
           height: 9px;
+
+          cursor: pointer;
+
           &::before {
             content: '';
             display: inline-block;
@@ -123,6 +136,10 @@
 
     &-link {
       color: #04D0AE;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

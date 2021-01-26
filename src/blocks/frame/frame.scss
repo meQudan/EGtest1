@@ -6,6 +6,10 @@ $frame-width: 1045px;
 
   box-shadow: -50px 0px 50px #091024;
 
+  &__img {
+    filter: brightness(80%);
+  }
+
   &__gradient {
     position: absolute;
     width: 207px;
@@ -42,6 +46,22 @@ $frame-width: 1045px;
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid #595959;
+
+    transition: $transition;
+
+    &:hover {
+      border-color: #87e389;
+
+      &>svg {
+        fill: #87e389;
+      }
+    }
+
+    &>svg {
+      fill: white;
+
+      transition: $transition;
+    }
   }
 
   &__text {

@@ -2,12 +2,23 @@
   background-color: $background-dark;
 
   %elem-style {
-    padding: 5px 17px; 
+    padding: 5px 17px;
 
     border-radius: 13px;
 
     font-weight: normal;
     font-size: 13px;
+
+    transition: $transition;
+
+    &:hover {
+      border-color: #87e389;
+
+      & > a {
+        color: #87e389;
+        text-shadow: 1px 1px 2px #87e389;
+      }
+    }
   }
 
   &__container {
@@ -22,10 +33,12 @@
   }
 
   &__link {
-    color: #8187AD;
+    color: #8187ad;
+    transition: $transition;
 
     &-all {
       color: #fff;
+      transition: $transition;
     }
   }
 
@@ -33,13 +46,13 @@
     @extend %elem-style;
     margin-right: 15px;
 
-    border: 1px solid #282F4B;
+    border: 1px solid #282f4b;
 
     &-all {
       @extend %elem-style;
       margin-right: 15px;
 
-      border: 1px solid #D73649;
+      border: 1px solid #d73649;
     }
   }
 
@@ -48,15 +61,15 @@
 
     width: 83px;
 
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.28);
 
     appearance: none;
     background-color: $background-dark;
-    background-image: url("/img/select-arrow-categories.svg");
+    background-image: url('/img/select-arrow-categories.svg');
     background-repeat: no-repeat;
     background-position: top 10px right 11px;
-    
+
     font-family: Roboto;
     color: #fff;
     line-height: 1em;

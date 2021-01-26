@@ -34,8 +34,12 @@
     text-decoration-line: underline;
     color: #A2A5C1;
 
+    transition: $transition;
+
     &:hover {
-      text-decoration-line: underline;
+      color: #87E389;
+      text-shadow: 1px 1px 2px #87E389;
+      text-decoration: underline;
     }
   }
 

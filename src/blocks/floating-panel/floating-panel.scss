@@ -9,13 +9,18 @@
   &__btn {
     width: 48px;
     height: 48px;
-  
-    background-color: #32448C;
+
+    background-color: #32448c;
     border-radius: 50%;
+
+    transition: $transition;
+
+    &:hover {
+      box-shadow: inset 0 0 15px #87E389;
+    }
 
     &:not(:first-child) {
       margin-top: 9px;
     }
   }
-  
 }
