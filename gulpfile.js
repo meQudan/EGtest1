@@ -26,6 +26,7 @@ const path = {
 };
 
 const { src, dest, watch, parallel, series } = require('gulp'),
+  gulp = require('gulp'),
   browsersync = require('browser-sync').create(),
   fileinclude = require('gulp-file-include'),
   del = require('del'),
@@ -55,11 +56,7 @@ function browserSync(params) {
 }
 
 function html() {
-  return src(path.src.html)
-    .pipe(fileinclude())
-    .pipe(webphtml())
-    .pipe(dest(path.build.html))
-    .pipe(browsersync.stream());
+  return src(path.src.html).pipe(fileinclude()).pipe(webphtml()).pipe(dest(path.build.html)).pipe(browsersync.stream());
 }
 
 function css() {
@@ -120,12 +117,8 @@ function images() {
 }
 
 function fonts(params) {
-  src(path.src.fonts)
-    .pipe(ttf2woff())
-    .pipe(dest(path.build.fonts));
-  return src(path.src.fonts)
-    .pipe(ttf2woff2())
-    .pipe(dest(path.build.fonts));
+  src(path.src.fonts).pipe(ttf2woff()).pipe(dest(path.build.fonts));
+  return src(path.src.fonts).pipe(ttf2woff2()).pipe(dest(path.build.fonts));
 }
 
 function watchFiles(params) {
@@ -139,10 +132,7 @@ function clean(params) {
   return del(path.clean);
 }
 
-const build = series(
-  clean, 
-  parallel(js, css, html, images, fonts)
-);
+const build = series(clean, parallel(js, css, html, images, fonts));
 
 // * tasks
 
@@ -150,7 +140,7 @@ function otf2ttfTask() {
   return src([source_folder + '/fonts/*.otf'])
     .pipe(fonter({ formats: ['ttf'] }))
     .pipe(dest(source_folder + '/fonts/'));
-};
+}
 
 function svgSpriteTask() {
   return gulp
@@ -166,7 +156,7 @@ function svgSpriteTask() {
       })
     )
     .pipe(dest(path.build.img));
-};
+}
 
 exports.otf2ttfTask = otf2ttfTask;
 exports.svgSpriteTask = svgSpriteTask;

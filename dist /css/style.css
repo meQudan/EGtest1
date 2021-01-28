@@ -303,6 +303,32 @@ body {
   background-position: bottom 23px left 225px;
 }
 
+.socials-fill {
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.socials-fill_arroba {
+  fill: #277EBC;
+}
+
+.socials-fill_ok {
+  fill: #F98D2E;
+}
+
+.socials-fill_fb {
+  fill: #3B5998;
+}
+
+.socials-fill_vk {
+  fill: #4D76A1;
+}
+
+.socials-fill_google {
+  fill: #DC4E41;
+}
+
 .auth {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -361,6 +387,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 6px;
+  margin-left: -15px;
 }
 
 .auth__social-btn {
@@ -374,10 +401,16 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50%;
+  margin-left: 15px;
 }
 
-.auth__social-btn:not(:first-child) {
-  margin-left: 15px;
+.auth__social-btn:hover .socials-fill {
+  fill: #87E389;
+}
+
+.auth__social-icon {
+  width: 33px;
+  height: 33px;
 }
 
 .auth__pass-currency-wrapper {
@@ -1078,47 +1111,48 @@ body {
 
 .games__big-wrapper {
   position: relative;
-}
-
-.games__big-img {
-  width: 100%;
   border-radius: 5%;
 }
 
-.games__big-img_green {
+.games__big-wrapper_green {
   border: 5px solid #8beb01;
   -webkit-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 
-.games__big-img_green:hover {
+.games__big-wrapper_green:hover {
   -webkit-box-shadow: 0px 0px 14px #8beb01;
           box-shadow: 0px 0px 14px #8beb01;
 }
 
-.games__big-img_blue {
-  border: 5px solid #50ffe0;
+.games__big-wrapper_blue {
+  border: 5px solid #50ffdf;
   -webkit-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 
-.games__big-img_blue:hover {
+.games__big-wrapper_blue:hover {
   -webkit-box-shadow: 0px 0px 14px #50ffdf;
           box-shadow: 0px 0px 14px #50ffdf;
 }
 
-.games__big-img_purple {
+.games__big-wrapper_purple {
   border: 5px solid #4f00f7;
   -webkit-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 
-.games__big-img_purple:hover {
+.games__big-wrapper_purple:hover {
   -webkit-box-shadow: 0px 0px 14px #4f00f7;
           box-shadow: 0px 0px 14px #4f00f7;
+}
+
+.games__big-img {
+  width: 100%;
+  border-radius: 5%;
 }
 
 .games__play {

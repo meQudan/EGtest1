@@ -45,20 +45,30 @@
 
   &__social {
     display: flex;
-    margin-bottom: 6px;
-  }
+    margin-bottom: 6px;  
+    margin-left: -15px;
 
-  &__social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    &:not(:first-child) {
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      border-radius: 50%;
+  
       margin-left: 15px;
+
+      &:hover .socials-fill {
+        fill: #87E389;
+      }
+    }
+
+    &-icon {
+      width: 33px;
+      height: 33px; 
     }
   }
+
+  
 
   &__pass {
 

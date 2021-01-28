@@ -1,0 +1,23 @@
+.socials-fill {
+  transition: $transition;
+  
+  &_arroba {
+    fill:#277EBC;
+  }
+
+  &_ok {
+    fill: #F98D2E;
+  }
+
+  &_fb {
+    fill: #3B5998;
+  }
+  
+  &_vk {
+    fill: #4D76A1;
+  }
+
+  &_google {
+    fill: #DC4E41;
+  }
+}

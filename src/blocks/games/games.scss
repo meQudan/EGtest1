@@ -1,3 +1,7 @@
+$border-color_green: #8beb01;
+$border-color_blue: #50ffdf;
+$border-color_purple: #4f00f7;
+
 .games {
   &__container {
     padding-top: 50px;
@@ -153,39 +157,41 @@
 
     &-wrapper {
       position: relative;
+
+      border-radius: 5%;
+
+      &_green {
+        border: 5px solid $border-color_green;
+        transition: $transition;
+
+        &:hover {
+          box-shadow: 0px 0px 14px $border-color_green;
+        }
+      }
+
+      &_blue {
+        border: 5px solid $border-color_blue;
+        transition: $transition;
+
+        &:hover {
+          box-shadow: 0px 0px 14px $border-color_blue;
+        }
+      }
+
+      &_purple {
+        border: 5px solid $border-color_purple;
+        transition: $transition;
+
+        &:hover {
+          box-shadow: 0px 0px 14px $border-color_purple;
+        }
+      }
     }
 
     &-img {
       width: 100%;
 
       border-radius: 5%;
-
-      &_green {
-        border: 5px solid #8beb01;
-        transition: $transition;
-
-        &:hover {
-          box-shadow: 0px 0px 14px #8beb01;
-        }
-      }
-
-      &_blue {
-        border: 5px solid #50ffe0;
-        transition: $transition;
-
-        &:hover {
-          box-shadow: 0px 0px 14px #50ffdf;
-        }
-      }
-
-      &_purple {
-        border: 5px solid #4f00f7;
-        transition: $transition;
-
-        &:hover {
-          box-shadow: 0px 0px 14px #4f00f7;
-        }
-      }
     }
   }
 
