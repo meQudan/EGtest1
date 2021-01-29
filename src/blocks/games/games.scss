@@ -77,14 +77,23 @@ $border-color_purple: #4f00f7;
         filter: brightness(50%);
       }
 
-      & > .games__small-name, & > .games__small-btns {
+      & > .games__small-name,
+      & > .games__small-btns {
         z-index: 1;
       }
     }
 
     &-img {
       width: 100%;
-      border-radius: 11%;
+      height: 100%;
+      object-fit: cover;
+
+      &-wrapper {
+        width: 250px;
+        height: 188px;
+        overflow: hidden;
+        border-radius: 11%;
+      }
     }
 
     &-name {
@@ -158,6 +167,9 @@ $border-color_purple: #4f00f7;
     &-wrapper {
       position: relative;
 
+      width: 100%;
+      overflow: hidden;
+
       border-radius: 5%;
 
       &_green {
@@ -190,8 +202,8 @@ $border-color_purple: #4f00f7;
 
     &-img {
       width: 100%;
-
-      border-radius: 5%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
