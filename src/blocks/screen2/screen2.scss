@@ -2,12 +2,22 @@
   background-image: url("../img/crystals.png");
   background-repeat: no-repeat;
   background-position: top -90px left 53px;
+
+  position: relative;
   
   &__container {
     display: flex;
 
+    height: 492px;
+
     background-image: url("../img/crystals1.png");
     background-repeat: no-repeat;
     background-position: bottom 23px left 225px ;
+  }
+}
+
+@media (max-width: 1023px) {
+  .screen2__container {
+    padding: 0;
   }
 }
