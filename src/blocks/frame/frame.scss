@@ -165,15 +165,14 @@ $left-about: 70px;
     }
 
     &__about {
-      width: calc(920px + 65 * ((100vw - 1550px) / (1950 - 1550)));
+      width: small-big-size(920, 985, 1550, 1950);
     }
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1549px) {
   .frame__about {
-    width: calc(570px + 340 * ((100vw - 1024px) / (1549 - 1024)));
-    
+    width: small-big-size(570, 910, 1024, 1549);
   }
 }
 

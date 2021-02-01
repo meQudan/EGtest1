@@ -5,6 +5,10 @@ $background-dark: #121423;
 $background-light: linear-gradient(289.68deg, #121726 57.75%, #222C42 90.78%);
 $transition: all 0.5s linear;
 
+@function small-big-size($small-size, $big-size, $small-vp, $big-vp) {
+  @return calc(#{$small-size}px + (#{$big-size} - #{$small-size}) * ((100vw - #{$small-vp}px) / (#{$big-vp} - #{$small-vp})));
+}
+
 body {
   font-family: Roboto, Arial, sans-serif;
 }
