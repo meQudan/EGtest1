@@ -31,3 +31,13 @@
     }
   }
 }
+
+@media (max-width: 479px) {
+  .logo__img_size_small {
+    width: 30px;
+  }
+
+  .logo__text_size_small {
+    font-size: 16px;
+  }
+}

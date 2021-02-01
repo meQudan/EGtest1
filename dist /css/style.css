@@ -282,10 +282,120 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: -15px;
+}
+
+.header__btn {
+  margin-left: 15px;
 }
 
 .header__btn:last-child {
-  margin-left: 15px;
+  display: none;
+}
+
+#burger-menu__toggle {
+  opacity: 0;
+  position: absolute;
+}
+
+#burger-menu__toggle:checked ~ .burger-menu__btn > span {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#burger-menu__toggle:checked ~ .burger-menu__btn > span::before {
+  top: 0;
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+
+#burger-menu__toggle:checked ~ .burger-menu__btn > span::after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#burger-menu__toggle:checked ~ .burger-menu__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-menu__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: relative;
+}
+
+.burger-menu__btn > span,
+.burger-menu__btn > span::before,
+.burger-menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #32448c;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.burger-menu__btn > span::before {
+  content: '';
+  top: -10px;
+}
+
+.burger-menu__btn > span::after {
+  content: '';
+  top: 10px;
+}
+
+.burger-menu__box {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+  margin-left: -10px;
+  padding: 10px;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #32448c;
+}
+
+.burger-menu__search {
+  padding: 7px 15px;
+  color: #32448c;
+  border-radius: 10px;
+}
+
+.burger-menu__item {
+  margin-top: 10px;
+  color: #87E389;
+}
+
+.burger-menu__item:hover {
+  text-decoration: underline;
 }
 
 .screen2 {
@@ -1781,6 +1891,47 @@ body {
 .floating-arrow:hover {
   -webkit-box-shadow: inset 0 0 15px #87E389;
           box-shadow: inset 0 0 15px #87E389;
+}
+
+@media (max-width: 1560px) {
+  .header {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 880px) {
+  .header__search-btn,
+  .header__nav {
+    display: none;
+  }
+
+  .btn_color_green {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__btn {
+    display: none;
+  }
+
+  .header__btn:last-child {
+    display: block;
+  }
+}
+
+@media (max-width: 479px) {
+  .logo__img_size_small {
+    width: 30px;
+  }
+
+  .logo__text_size_small {
+    font-size: 16px;
+  }
 }
 
 .webp .screen2{ background-image: url(../img/crystals.webp); }

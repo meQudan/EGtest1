@@ -52,9 +52,41 @@
 
   &__btns {
     display: flex;
+
+    margin-left: -15px;
   }
 
-  &__btn:last-child {
+  &__btn {
     margin-left: 15px;
+
+    &:last-child {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1560px) {
+  .header {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 880px) {
+  .header__search-btn, .header__nav {
+    display: none;
+  }
+
+  .btn_color_green {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__btn {
+    display: none;
+
+    &:last-child {
+      display: block;
+    }
   }
 }
