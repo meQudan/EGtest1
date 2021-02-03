@@ -170,42 +170,38 @@ $border-color_purple: #4f00f7;
     align-items: center;
     justify-content: center;
 
+    position: relative;
+
+    overflow: hidden;
+    border-radius: 5%;
+
     width: 490px;
     height: 380px;
 
-    &-wrapper {
-      position: relative;
+    &_green {
+      border: 5px solid $border-color_green;
+      transition: $transition;
 
-      width: 100%;
-      overflow: hidden;
-
-      border-radius: 5%;
-
-      &_green {
-        border: 5px solid $border-color_green;
-        transition: $transition;
-
-        &:hover {
-          box-shadow: 0px 0px 14px $border-color_green;
-        }
+      &:hover {
+        box-shadow: 0px 0px 14px $border-color_green;
       }
+    }
 
-      &_blue {
-        border: 5px solid $border-color_blue;
-        transition: $transition;
+    &_blue {
+      border: 5px solid $border-color_blue;
+      transition: $transition;
 
-        &:hover {
-          box-shadow: 0px 0px 14px $border-color_blue;
-        }
+      &:hover {
+        box-shadow: 0px 0px 14px $border-color_blue;
       }
+    }
 
-      &_purple {
-        border: 5px solid $border-color_purple;
-        transition: $transition;
+    &_purple {
+      border: 5px solid $border-color_purple;
+      transition: $transition;
 
-        &:hover {
-          box-shadow: 0px 0px 14px $border-color_purple;
-        }
+      &:hover {
+        box-shadow: 0px 0px 14px $border-color_purple;
       }
     }
 

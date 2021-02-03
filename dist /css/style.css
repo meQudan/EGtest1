@@ -116,6 +116,17 @@ h6 {
   font-style: normal;
 }
 
+.last-wins__winner-name,
+.last-wins__winner-game,
+.last-wins__winner-cash,
+.biggest-wins__td-player,
+.biggest-wins__td-points {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
 body {
   font-family: Roboto, Arial, sans-serif;
 }
@@ -1277,49 +1288,45 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5%;
   width: 490px;
   height: 380px;
 }
 
-.games__big-wrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 5%;
-}
-
-.games__big-wrapper_green {
+.games__big_green {
   border: 5px solid #8beb01;
   -webkit-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 
-.games__big-wrapper_green:hover {
+.games__big_green:hover {
   -webkit-box-shadow: 0px 0px 14px #8beb01;
           box-shadow: 0px 0px 14px #8beb01;
 }
 
-.games__big-wrapper_blue {
+.games__big_blue {
   border: 5px solid #50ffdf;
   -webkit-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 
-.games__big-wrapper_blue:hover {
+.games__big_blue:hover {
   -webkit-box-shadow: 0px 0px 14px #50ffdf;
           box-shadow: 0px 0px 14px #50ffdf;
 }
 
-.games__big-wrapper_purple {
+.games__big_purple {
   border: 5px solid #4f00f7;
   -webkit-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 
-.games__big-wrapper_purple:hover {
+.games__big_purple:hover {
   -webkit-box-shadow: 0px 0px 14px #4f00f7;
           box-shadow: 0px 0px 14px #4f00f7;
 }
@@ -1406,6 +1413,7 @@ body {
   font-weight: bold;
   font-size: 24px;
   color: #FFFFFF;
+  white-space: nowrap;
 }
 
 .last-wins__winners {
@@ -1415,18 +1423,24 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-top: -15px;
 }
 
 .last-wins__winner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 15px;
+  margin-top: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .last-wins__winner-img {
@@ -1456,6 +1470,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px 0;
+  width: 94px;
 }
 
 .last-wins__winner-name {
@@ -1477,6 +1492,7 @@ body {
 }
 
 .promo {
+  margin-top: -30px;
   padding-top: 50px;
 }
 
@@ -1484,6 +1500,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .promo__title {
@@ -1498,16 +1518,23 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 585px;
           flex: 0 1 585px;
+  margin-top: 30px;
 }
 
 .top-game__content {
   position: relative;
+  width: 100%;
+  padding-top: 61.5%;
 }
 
 .top-game__img {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
 }
 
 .top-game__promo {
@@ -1570,14 +1597,15 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 355px;
-          flex: 1 0 355px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 355px;
+          flex: 0 0 355px;
   -webkit-transform: translateY(10px);
       -ms-transform: translateY(10px);
           transform: translateY(10px);
+  margin-top: 30px;
   padding: 53px 0 53px 54px;
-  background: #20263E;
+  background: #20263e;
   -webkit-box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.35);
           box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.35);
 }
@@ -1589,13 +1617,17 @@ body {
   position: relative;
 }
 
-.site-stats__item:not(:last-child):after {
+.site-stats__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.site-stats__item:not(:last-child)::after {
   content: '';
   display: block;
   position: absolute;
   bottom: -17px;
   width: 265px;
-  border: 1px solid #282F4B;
+  border: 1px solid #282f4b;
 }
 
 .site-stats__img {
@@ -1618,10 +1650,9 @@ body {
 
 .site-stats__number {
   line-height: 1em;
-  height: 45px;
   font-weight: 700;
   font-size: 50px;
-  color: #87E389;
+  color: #87e389;
 }
 
 .site-stats__about {
@@ -1636,10 +1667,12 @@ body {
           flex: 1 1 535px;
   text-align: center;
   border-collapse: collapse;
+  margin-top: 30px;
 }
 
-.biggest-wins__tr {
-  height: 40px;
+.biggest-wins td,
+.biggest-wins th {
+  padding: 10px;
 }
 
 .biggest-wins__tr:nth-child(2) {
@@ -1664,12 +1697,22 @@ body {
 }
 
 .biggest-wins__td-player {
+  max-width: 230px;
   font-size: 14px;
   color: #fff;
 }
 
+.biggest-wins__td-game {
+  max-width: 230px;
+  color: #fff;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
 .biggest-wins__link {
   font-size: 14px;
+  line-height: 1.3em;
   color: #fff;
   text-decoration: underline;
   -webkit-transition: all 0.5s linear;
@@ -1684,6 +1727,7 @@ body {
 }
 
 .biggest-wins__td-points {
+  max-width: 230px;
   font-weight: bold;
   font-size: 14px;
   color: #fff;
@@ -1950,6 +1994,7 @@ body {
   .frame {
     position: absolute;
     margin: 0;
+    overflow: hidden;
     width: 65%;
     top: 0;
     bottom: 0;
@@ -2077,6 +2122,47 @@ body {
   }
 }
 
+@media (max-width: 719px) {
+  .biggest-wins {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .last-wins__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .last-wins__title {
+    margin: 30px 0;
+  }
+
+  .last-wins__winners {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .last-wins__winner-img-link {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 614px) {
+  .top-game__info,
+  .top-game__link {
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (615 - 320)));
+    line-height: calc(15px + (19 - 15) * ((100vw - 320px) / (615 - 320)));
+    text-shadow: 1px 1px 2px red;
+  }
+}
+
 @media (max-width: 480px) {
   .header__btn {
     display: none;
@@ -2094,6 +2180,31 @@ body {
 
   .logo__text_size_small {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 385px) {
+  .site-stats {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
+
+  .site-stats__item:not(:last-child)::after {
+    width: calc(200px + (265 - 200) * ((100vw - 320px) / (385 - 320)));
+  }
+
+  .site-stats__img {
+    width: calc(55px + (75 - 55) * ((100vw - 320px) / (385 - 320)));
+    height: calc(55px + (75 - 55) * ((100vw - 320px) / (385 - 320)));
+  }
+
+  .site-stats__number {
+    font-size: calc(40px + (50 - 40) * ((100vw - 320px) / (385 - 320)));
+  }
+
+  .site-stats__about {
+    font-size: calc(12px + (15 - 12) * ((100vw - 320px) / (385 - 320)));
   }
 }
 

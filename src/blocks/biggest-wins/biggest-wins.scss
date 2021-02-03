@@ -3,9 +3,14 @@
   text-align: center;
   border-collapse: collapse;
 
-  &__tr {
-    height: 40px;
+  margin-top: 30px;
 
+  & td,
+  & th {
+    padding: 10px;
+  }
+
+  &__tr {
     &:nth-child(2) {
       background-image: linear-gradient(180deg, rgba(10, 17, 37, 0.5) 0%, rgba(26, 33, 51, 0) 23.58%);
     }
@@ -21,19 +26,31 @@
 
   &__th {
     width: 33%;
-
     font-weight: 500;
     font-size: 14px;
     color: #8c91ba;
   }
 
   &__td-player {
+    @extend %text-overflow;
+
+    max-width: 230px;
+
     font-size: 14px;
     color: #fff;
   }
 
+  &__td-game {
+    max-width: 230px;
+    color: #fff;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   &__link {
     font-size: 14px;
+    line-height: 1.3em;
     color: #fff;
     text-decoration: underline;
 
@@ -47,8 +64,18 @@
   }
 
   &__td-points {
+    @extend %text-overflow;
+
+    max-width: 230px;
+
     font-weight: bold;
     font-size: 14px;
     color: #fff;
+  }
+}
+
+@media (max-width: 719px) {
+  .biggest-wins {
+    display: none;
   }
 }
