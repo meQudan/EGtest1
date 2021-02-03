@@ -3,8 +3,8 @@
   flex-direction: column;
 
   position: fixed;
-  right: 50px;
-  bottom: 200px;
+  bottom: 205px;
+  right: 30px;
 
   &__btn {
     width: 48px;
@@ -22,5 +22,17 @@
     &:not(:first-child) {
       margin-top: 9px;
     }
+  }
+}
+
+@media (max-width: 425px) {
+  .floating-arrow {
+    right: 30px;
+  }
+}
+
+@media (max-height: 425px) {
+  .floating-panel {
+    bottom: 135px;
   }
 }

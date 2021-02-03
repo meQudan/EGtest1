@@ -5,9 +5,16 @@
 
   &__contacts {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
 
-    margin-top: 44px;
+    margin-left: -30px;
+    margin-top: 14px;
+  }
+
+  &__imgs {
+    margin-top: 30px;
+    margin-left: 30px;
   }
 
   &__emblems {
@@ -22,9 +29,18 @@
 
   &__links {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 30px;
+
+    &-group {
+      margin-top: 40px;
+      width: 175px;
+    }
 
     &-title {
-      margin: 20px 65px 25px 0;
+      margin-bottom: 25px;
 
       font-weight: 500;
       font-size: 24px;
@@ -45,6 +61,13 @@
     }
 
     &-wrapper {
+      max-width: 165px;
+
+      color: #32448c;
+    
+      overflow: hidden;
+      text-overflow: ellipsis;
+
       &:not(:last-child) {
         margin-bottom: 9px;
       }
@@ -54,7 +77,8 @@
   &__promo {
     &-info {
       flex: 0 1 412px;
-      margin-top: 20px;
+      margin-top: 50px;
+      margin-left: 30px;
 
       &-title {
         margin-bottom: 24px;

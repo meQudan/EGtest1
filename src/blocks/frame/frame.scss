@@ -8,6 +8,10 @@ $left-about: 70px;
 
   &__img {
     filter: brightness(80%);
+
+    width: 1240px;
+    object-fit: cover;
+    height: 100%;
   }
 
   &__gradient {
