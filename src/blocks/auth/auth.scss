@@ -1,10 +1,9 @@
 .auth {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  align-content: center;
+  justify-items: center;
 
-  min-width: 320px;
+  width: 320px;
 
   &__title {
     margin-bottom: 13px;
@@ -12,7 +11,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   &__text {
@@ -21,57 +20,55 @@
     font-weight: normal;
     line-height: 14px;
     font-size: 12px;
-    color: #8C91BA;
+    color: #8c91ba;
   }
 
   &__link {
     font-weight: normal;
     font-size: 12px;
     text-decoration-line: underline;
-    color: #A2A5C1;
+    color: #a2a5c1;
 
     transition: $transition;
 
     &:hover {
-      color: #87E389;
-      text-shadow: 1px 1px 2px #87E389;
+      color: #87e389;
+      text-shadow: 1px 1px 2px #87e389;
       text-decoration: underline;
     }
   }
 
   &__social {
-    display: flex;
-    margin-bottom: 6px;  
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin-bottom: 6px;
     margin-left: -15px;
 
     &-btn {
-      display: flex;
+      display: grid;
       align-items: center;
       justify-content: center;
-  
+
       border-radius: 50%;
-  
+
       margin-left: 15px;
 
       &:hover .socials-fill {
-        fill: #87E389;
+        fill: #87e389;
       }
     }
 
     &-icon {
       width: 33px;
-      height: 33px; 
+      height: 33px;
     }
   }
 
-  
-
   &__pass {
-
     &-currency-wrapper {
-      display: flex;
-      justify-content: space-between;
-  
+      display: grid;
+      grid-template-columns: 1fr auto;
+
       width: 100%;
     }
 
@@ -93,7 +90,7 @@
 
   &__promocode {
     &-wrapper {
-      align-self: start;
+      justify-self: start;
       position: relative;
       width: 156px;
     }
@@ -107,7 +104,7 @@
 
       font-weight: normal;
       font-size: 12px;
-      color: #454D95;
+      color: #454d95;
 
       &:hover {
         cursor: pointer;
@@ -120,18 +117,18 @@
     margin-bottom: 13px;
 
     width: 100%;
-    background: #E1E6EA;
-    border: 1px solid #32448C;
+    background: #e1e6ea;
+    border: 1px solid #32448c;
     border-radius: 17px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
-    color: #7379A5;
+    color: #7379a5;
 
     &::placeholder {
-      color: #7379A5;
+      color: #7379a5;
     }
 
     &-currency {
@@ -141,7 +138,7 @@
 
       border-radius: 7px;
       appearance: none;
-      background-image: url("/img/select-arrow-auth.svg");
+      background-image: url('/img/select-arrow-auth.svg');
       background-repeat: no-repeat;
       background-position: top 13px right 9px;
     }
@@ -155,14 +152,14 @@
     width: 15px;
     height: 15px;
 
-    &:checked+label::before {
-      border-color: #0048B1;
-      background-color: #0048B1;
+    &:checked + label::before {
+      border-color: #0048b1;
+      background-color: #0048b1;
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
     }
 
     &-wrapper {
-      align-self: start;
+      justify-self: start;
       height: 15px;
 
       margin-bottom: 13px;
@@ -179,10 +176,10 @@
 
         width: 15px;
         height: 15px;
-        
-        background: #E1E5EA;
+
+        background: #e1e5ea;
         background-position: center center;
-        border: 1px solid #32448C;
+        border: 1px solid #32448c;
         border-radius: 4px;
         box-sizing: border-box;
         box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);

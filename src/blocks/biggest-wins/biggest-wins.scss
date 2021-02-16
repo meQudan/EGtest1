@@ -1,9 +1,8 @@
 .biggest-wins {
-  flex: 1 1 535px;
   text-align: center;
   border-collapse: collapse;
 
-  margin-top: 30px;
+  min-width: 535px;
 
   & td,
   & th {
@@ -34,14 +33,14 @@
   &__td-player {
     @extend %text-overflow;
 
-    max-width: 230px;
+    max-width: 178px;
 
     font-size: 14px;
     color: #fff;
   }
 
   &__td-game {
-    max-width: 230px;
+    max-width: 178px;
     color: #fff;
 
     overflow: hidden;
@@ -66,11 +65,23 @@
   &__td-points {
     @extend %text-overflow;
 
-    max-width: 230px;
+    max-width: 178px;
 
     font-weight: bold;
     font-size: 14px;
     color: #fff;
+  }
+}
+
+@media (max-width: 1500px) {
+  .biggest-wins {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 995px) {
+  .biggest-wins {
+    justify-self: stretch;
   }
 }
 

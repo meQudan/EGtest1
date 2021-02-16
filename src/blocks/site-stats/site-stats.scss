@@ -1,24 +1,23 @@
 .site-stats {
-  display: flex;
-  flex-direction: column;
+  width: 355px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
   justify-content: space-between;
-  flex: 0 0 355px;
 
   transform: translateY(10px);
 
-  margin-top: 30px;
   padding: 53px 0 53px 54px;
 
   background: #20263e;
   box-shadow: inset 0px 0px 24px rgba(0, 0, 0, 0.35);
 
   &__item {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: 30px;
-
       &::after {
         content: '';
         display: block;
@@ -39,8 +38,8 @@
   }
 
   &__info {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: space-between;
     margin-left: 30px;
   }
@@ -61,7 +60,7 @@
 
 @media (max-width: 385px) {
   .site-stats {
-    flex: auto;
+    width: 100%;
   }
 
   .site-stats__item:not(:last-child)::after {

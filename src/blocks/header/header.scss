@@ -11,13 +11,15 @@
   z-index: 999;
 
   &__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     justify-content: space-between;
     align-items: center;
   }
 
   &__main-menu {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
   }
 
   &__search {
@@ -35,7 +37,8 @@
   }
 
   &__nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     margin-left: 43px;
   }
 
@@ -59,7 +62,8 @@
   }
 
   &__btns {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
 
     margin-left: -15px;
   }

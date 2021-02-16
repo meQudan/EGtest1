@@ -1,6 +1,6 @@
 .floating-panel {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
 
   position: fixed;
   bottom: 205px;

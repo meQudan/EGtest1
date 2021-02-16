@@ -4,6 +4,8 @@ $border-color_purple: #4f00f7;
 
 .games {
   &__container {
+    display: grid;
+    row-gap: 30px;
     padding-top: 50px;
   }
 
@@ -12,11 +14,9 @@ $border-color_purple: #4f00f7;
   }
 
   &__header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-
-    margin-bottom: 30px;
   }
 
   &__title {
@@ -28,6 +28,8 @@ $border-color_purple: #4f00f7;
   }
 
   &__link-view-all {
+    justify-self: end;
+
     font-weight: 500;
     font-size: 18px;
     color: #87e389;
@@ -47,33 +49,30 @@ $border-color_purple: #4f00f7;
   }
 
   &__menu {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 10px;
     align-items: center;
+
+    &-order1 {
+      grid-template-columns: auto 1fr;
+
+      & > .games__smalls {
+        order: 1;
+      }
+    }
   }
 
   &__smalls {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 8px;
     justify-content: space-around;
     align-content: space-around;
-    padding-right: 10px;
-
-    margin-left: -8px;
-    margin-top: -8px;
-
-    &-order1 {
-      order: 1;
-
-      padding-left: 10px;
-      padding-right: 0;
-    }
   }
 
   &__small {
     position: relative;
-
-    margin-left: 8px;
-    margin-top: 8px;
 
     &:hover {
       & > .games__small-img-wrapper {
@@ -92,7 +91,7 @@ $border-color_purple: #4f00f7;
       object-fit: cover;
 
       &-wrapper {
-        width: 250px;
+        width: 100%;
         height: 188px;
         overflow: hidden;
         border-radius: 11%;
@@ -114,8 +113,9 @@ $border-color_purple: #4f00f7;
     }
 
     &-btns {
-      display: flex;
-      justify-content: space-around;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
       position: absolute;
       bottom: 5%;
 
@@ -125,12 +125,12 @@ $border-color_purple: #4f00f7;
     }
 
     &-btn {
-      display: flex;
+      display: grid;
       justify-content: center;
       align-items: center;
 
       padding: 10px;
-      width: 40%;
+      width: 80%;
 
       text-align: center;
       vertical-align: middle;
@@ -165,11 +165,6 @@ $border-color_purple: #4f00f7;
   }
 
   &__big {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-
     position: relative;
 
     overflow: hidden;
@@ -206,6 +201,9 @@ $border-color_purple: #4f00f7;
     }
 
     &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -271,12 +269,26 @@ $border-color_purple: #4f00f7;
 }
 
 @media (max-width: 1550px) {
+  .games__menu {
+    grid-template-columns: 1fr small-big-size(300, 485, 1024, 1550);
+
+    &-order1 {
+      grid-template-columns: small-big-size(300, 485, 1024, 1550) 1fr;
+
+      & > .games__smalls {
+        order: 1;
+      }
+    }
+  }
+  .games__smalls {
+    grid-template-columns: repeat(auto-fill, small-big-size(150, 244, 1024, 1550));
+  }
   .games__big {
     width: small-big-size(300, 485, 1024, 1550); // 0,778904665
     height: small-big-size(232, 378, 1024, 1550);
   }
   .games__small-img-wrapper {
-    width: small-big-size(150, 244, 1024, 1550); // 0,752
+    // width: small-big-size(150, 244, 1024, 1550); // 0,752
     height: small-big-size(113, 183, 1024, 1550);
   }
   .games__small-btn {
@@ -286,14 +298,25 @@ $border-color_purple: #4f00f7;
 }
 
 @media (max-width: 1023px) {
+  .games__menu {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
   .games__big {
-    width: 300px;
-    height: 232px;
+    justify-self: center;
+    width: small-big-size(300, 490, 320, 970);
+    height: small-big-size(232, 380, 320, 970);
+  }
+
+  .games__smalls {
+    order: 1;
+    grid-template-columns: repeat(auto-fill, small-big-size(150, 200, 320, 1023)); // 0,752
   }
 
   .games__small-img-wrapper {
-    width: 150px;
-    height: 113px;
+    width: 100%;
+    height: small-big-size(113, 173, 320, 1023);
   }
 
   .games__small-btn {
@@ -302,36 +325,24 @@ $border-color_purple: #4f00f7;
   }
 }
 
-@media (max-width: 820px) {
-  .games__menu {
-    flex-direction: column;
-  }
-
-  .games__big {
-    width: small-big-size(300, 490, 320, 820);
-    height: small-big-size(232, 380, 320, 820);
-  }
-
-  .games__smalls {
-    order: 1;
-    margin-left: -8px;
-    margin-top: 12px;
-
-    padding: 0;
-  }
-
-  .games__small {
-    margin-top: 15px;
-  }
-}
-
-@media (max-width: 340px) {
+@media (max-width: 360px) {
   .games__container {
     padding-left: 0;
     padding-right: 0;
   }
 
   .games__header {
-    padding: 0 15px;
+    padding: 0 10px;
+  }
+
+  .games__smalls {
+    width: 100%;
+    order: 1;
+    grid-template-columns: repeat(auto-fill, 150px); // 0,752
+  }
+
+  .games__small-img-wrapper {
+    width: 150px;
+    height: 113px;
   }
 }

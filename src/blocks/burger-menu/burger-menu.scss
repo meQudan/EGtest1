@@ -18,7 +18,7 @@
     }
 
     & ~ .burger-menu__box {
-      display: flex;
+      display: grid;
     }
   }
 }
@@ -26,9 +26,9 @@
 .burger-menu {
   display: none;
   &__btn {  
-    display: flex; 
+    display: grid; 
     align-items: center;
-    justify-content: center;
+    justify-items: center;
 
     width: 35px;
     height: 35px;
@@ -60,7 +60,6 @@
 
   &__box {
     display: none;
-    flex-direction: column;
 
     margin-top: 10px;
     margin-left: -10px;

@@ -1,7 +1,5 @@
 .top-game {
-  flex: 0 1 585px;
-
-  margin-top: 30px;
+  width: 585px;
 
   &__content {
     position: relative;
@@ -19,23 +17,21 @@
   }
 
   &__promo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-items: center;
 
     position: absolute;
     bottom: 0;
     left: 20%;
 
     width: 59%;
-
-    align-items: center;
   }
 
   &__info {
-    margin-bottom: 10px;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 10px;
     line-height: 19px;
     color: #fff;
 
@@ -62,10 +58,15 @@
 
   &__btn {
     margin-bottom: 18px;
+    white-space: nowrap;
+    width: 142px;
   }
 }
 
 @media (max-width: 614px) {
+  .top-game {
+    width: 100%;
+  }
   .top-game__info, 
   .top-game__link {
     font-size: small-big-size(14, 18, 320, 615);
