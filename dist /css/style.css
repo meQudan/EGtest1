@@ -1096,7 +1096,13 @@ body {
 }
 
 .games__small {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .games__small:hover > .games__small-img-wrapper {
@@ -1105,7 +1111,7 @@ body {
 }
 
 .games__small:hover > .games__small-name,
-.games__small:hover > .games__small-btns {
+.games__small:hover > .games__small-btn {
   z-index: 1;
 }
 
@@ -1117,6 +1123,8 @@ body {
 }
 
 .games__small-img-wrapper {
+  grid-row: 1 / -1;
+  grid-column: 1 /-1;
   width: 100%;
   height: 188px;
   overflow: hidden;
@@ -1124,30 +1132,16 @@ body {
 }
 
 .games__small-name {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
   font-weight: 800;
   font-size: 20px;
   color: #fff;
   z-index: -1;
 }
 
-.games__small-btns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  position: absolute;
-  bottom: 5%;
-  width: 100%;
-  z-index: -1;
-}
-
 .games__small-btn {
+  grid-row: 3 / 4;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1157,19 +1151,22 @@ body {
           align-items: center;
   padding: 10px;
   width: 80%;
-  text-align: center;
-  vertical-align: middle;
+  height: 80%;
   border-radius: 10% / 30%;
   font-weight: 800;
   font-size: 20px;
   line-height: 1em;
   color: #fff;
-  -webkit-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: -webkit-box-shadow 0.5s linear, -webkit-filter 0.5s linear;
+  transition: -webkit-box-shadow 0.5s linear, -webkit-filter 0.5s linear;
+  -o-transition: box-shadow 0.5s linear, filter 0.5s linear;
+  transition: box-shadow 0.5s linear, filter 0.5s linear;
+  transition: box-shadow 0.5s linear, filter 0.5s linear, -webkit-box-shadow 0.5s linear, -webkit-filter 0.5s linear;
+  z-index: -1;
 }
 
 .games__small-btn_yellow {
+  grid-column: 1 / 2;
   background-color: #d97711;
   color: #4d1e0a;
 }
@@ -1182,6 +1179,7 @@ body {
 }
 
 .games__small-btn_blue {
+  grid-column: 2 / 3;
   border: 3px solid #45c2b0;
   color: #fff;
 }

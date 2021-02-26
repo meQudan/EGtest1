@@ -72,7 +72,11 @@ $border-color_purple: #4f00f7;
   }
 
   &__small {
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
 
     &:hover {
       & > .games__small-img-wrapper {
@@ -80,7 +84,7 @@ $border-color_purple: #4f00f7;
       }
 
       & > .games__small-name,
-      & > .games__small-btns {
+      & > .games__small-btn {
         z-index: 1;
       }
     }
@@ -91,6 +95,9 @@ $border-color_purple: #4f00f7;
       object-fit: cover;
 
       &-wrapper {
+        grid-row: 1 / -1;
+        grid-column: 1 /-1;
+
         width: 100%;
         height: 188px;
         overflow: hidden;
@@ -99,11 +106,8 @@ $border-color_purple: #4f00f7;
     }
 
     &-name {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
+      grid-row: 2 / 3;
+      grid-column: 1 / -1;
 
       font-weight: 800;
       font-size: 20px;
@@ -112,28 +116,17 @@ $border-color_purple: #4f00f7;
       z-index: -1;
     }
 
-    &-btns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-items: center;
-      position: absolute;
-      bottom: 5%;
-
-      width: 100%;
-
-      z-index: -1;
-    }
-
     &-btn {
+      grid-row: 3 / 4;
+
       display: grid;
       justify-content: center;
       align-items: center;
 
       padding: 10px;
       width: 80%;
+      height: 80%;
 
-      text-align: center;
-      vertical-align: middle;
       border-radius: 10% / 30%;
 
       font-weight: 800;
@@ -141,9 +134,12 @@ $border-color_purple: #4f00f7;
       line-height: 1em;
       color: #fff;
 
-      transition: $transition;
+      transition: box-shadow 0.5s linear, filter 0.5s linear;
+
+      z-index: -1;
 
       &_yellow {
+        grid-column: 1 / 2;
         background-color: #d97711;
         color: #4d1e0a;
 
@@ -154,6 +150,7 @@ $border-color_purple: #4f00f7;
       }
 
       &_blue {
+        grid-column: 2 / 3;
         border: 3px solid #45c2b0;
         color: #fff;
 
